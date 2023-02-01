@@ -1,3 +1,5 @@
+package lesson_1;
+
 public class Book {
     private String name;
     private int year;

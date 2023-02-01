@@ -1,3 +1,8 @@
+package lesson_1;
+
+import lesson_1.Author;
+import lesson_1.Book;
+
 public class Homework {
     public static void main(String[] args) {
         Book book = new Book(" Горе от ума ");
