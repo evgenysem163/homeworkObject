@@ -5,9 +5,14 @@ import java.util.Objects;
 public class Book {
     private String name;
     private int year;
-    public Book(String name){
+    private  Author author;
+
+    public Book(Author author,String name){
         this.name = name;
+        this.author = author;
     }
+
+
 
     public void setYear(int year) {
         this.year = year;
@@ -25,12 +30,12 @@ public class Book {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Book book = (Book) o;
-        return  Objects.equals(name, book.name);
+        return year == book.year && Objects.equals(name, book.name) && Objects.equals(author, book.author);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, year);
+        return Objects.hash(name, year, author);
     }
 
     @Override
