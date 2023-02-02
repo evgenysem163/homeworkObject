@@ -3,10 +3,13 @@ package lesson_1;
 public class Book {
     private String name;
     private int year;
-    public Book(String name){
-        this.name = name;
-    }
 
+    private Author author;
+    public Book(Author author,String name){
+        this.author = author;
+        this.name = name;
+
+    }
     public void setYear(int year) {
         this.year = year;
     }
@@ -16,6 +19,9 @@ public class Book {
     }
     public String getName(){
         return  name;
-
     }
+//    public void setAuthor(Author author){
+//        this.author = author;
+//
+//    }
 }

@@ -5,14 +5,14 @@ import lesson_1.Book;
 
 public class Homework {
     public static void main(String[] args) {
-        Book book = new Book(" Горе от ума ");
+        lesson_1.Author author1 = new lesson_1.Author(" Александр Сергеевич", " Грибоедов ");
+        lesson_1.Book book = new lesson_1.Book(author1,"Горе от ума");
         book.setYear(1825);
-        Author author = new Author(" Александр Сергеевич", " Грибоедов ");
-        System.out.println(author.getSurname() + author.getName() + book.getName() + book.getYear());
+        System.out.println(author1.getName()+author1.getSurname()+" "+book.getName() +" "+ book.getYear());
 
-        Book bookTwo = new Book(" Герой нашего времени ");
+        lesson_1.Author authorTwo = new lesson_1.Author(" Михаил Юрьевич", " Лермонтов ");
+        lesson_1.Book bookTwo = new lesson_1.Book(authorTwo," Герой нашего времени ");
         bookTwo.setYear(1838);
-        Author authorTwo = new Author(" Михаил Юрьевич", " Лермонтов ");
         System.out.println(authorTwo.getSurname() + authorTwo.getName() + bookTwo.getName() + bookTwo.getYear());
     }
 }
